@@ -1,0 +1,78 @@
+{
+ "bounds": [
+  -125.0,
+  24.5,
+  -66.5,
+  49.5
+ ],
+ "res_deg": 0.05,
+ "layers": {
+  "heatflow": {
+   "label": "Surface heat flow (mW/m\u00b2)",
+   "clip": [
+    20,
+    150
+   ],
+   "cmap": "inferno"
+  },
+  "gradient": {
+   "label": "Geothermal gradient (\u00b0C/km)",
+   "clip": [
+    10,
+    80
+   ],
+   "cmap": "magma"
+  },
+  "temp3km": {
+   "label": "Temperature at 3 km (\u00b0C)",
+   "clip": [
+    45,
+    250
+   ],
+   "cmap": "plasma"
+  },
+  "temp5km": {
+   "label": "Temperature at 5 km (\u00b0C)",
+   "clip": [
+    75,
+    350
+   ],
+   "cmap": "plasma"
+  },
+  "gb_p50": {
+   "label": "Hydrothermal favorability P50 (Great Basin, percentile)",
+   "clip": [
+    0,
+    100
+   ],
+   "cmap": "viridis"
+  }
+ },
+ "provenance": {
+  "heatflow": {
+   "source_id": "smu_heatflow",
+   "method": "interpolated",
+   "note": "IDW (k=12, power=2.0) of SMU/GDR-1704 well observations onto a 0.05 deg grid; cells farther than 120.0 km from any well are masked."
+  },
+  "gradient": {
+   "source_id": "smu_heatflow",
+   "method": "interpolated",
+   "note": "Same IDW parameters; corrected interval gradients preferred."
+  },
+  "temp3km": {
+   "source_id": "smu_heatflow",
+   "method": "interpolated",
+   "note": "DERIVED: T(z) = 15.0 C + gradient x depth, capped at 400 C. A linear extrapolation of shallow gradients - unreliable in convection-dominated hydrothermal fields, effective resolution tens of km; ranks areas, does not derisk parcels."
+  },
+  "temp5km": {
+   "source_id": "smu_heatflow",
+   "method": "interpolated",
+   "note": "Same derivation at 5 km."
+  },
+  "gb_p50": {
+   "source_id": "usgs_gb_ml_2025",
+   "method": "interpolated",
+   "note": "USGS ML hydrothermal favorability P50 (250 m native), area-averaged to the working grid and expressed as a percentile of the Great Basin distribution. Null outside the Great Basin study area."
+  }
+ }
+}
