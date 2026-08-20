@@ -13,7 +13,27 @@
     20,
     150
    ],
-   "cmap": "inferno"
+   "cmap": "inferno",
+   "units": "mW/m\u00b2",
+   "explain": "Heat flowing out of the Earth's crust, in milliwatts per square metre - the most direct physical indicator of geothermal energy moving toward the surface. Continental background is ~40-65; above ~80 is notable; above ~100 marks geothermal provinces like the Great Basin and Imperial Valley.",
+   "source": {
+    "name": "SMU Geothermal Lab national heat-flow database (DOE Geothermal Data Repository, submission 1704), 58,117 well observations",
+    "url": "https://gdr.openei.org/submissions/1704"
+   },
+   "ramp": [
+    "#000003",
+    "#130a34",
+    "#390962",
+    "#5f126e",
+    "#85206a",
+    "#a92e5e",
+    "#cb4049",
+    "#e65c2e",
+    "#f78310",
+    "#fbae12",
+    "#f4db4b",
+    "#fcfea4"
+   ]
   },
   "gradient": {
    "label": "Geothermal gradient (\u00b0C/km)",
@@ -21,31 +41,111 @@
     10,
     80
    ],
-   "cmap": "magma"
+   "cmap": "magma",
+   "units": "\u00b0C/km",
+   "explain": "How quickly temperature rises with depth. The continental average is ~25 \u00b0C/km; higher gradients mean useful temperatures at shallower - and much cheaper - drilling depths. Values above ~50 \u00b0C/km generally justify geothermal exploration.",
+   "source": {
+    "name": "SMU Geothermal Lab database (DOE GDR submission 1704), 102,751 corrected well gradients",
+    "url": "https://gdr.openei.org/submissions/1704"
+   },
+   "ramp": [
+    "#000003",
+    "#110c31",
+    "#321067",
+    "#58157e",
+    "#7e2481",
+    "#a3307e",
+    "#c83d72",
+    "#e85461",
+    "#f97d5d",
+    "#fea873",
+    "#fdd295",
+    "#fbfcbf"
+   ]
   },
   "temp3km": {
-   "label": "Temperature at 3 km (\u00b0C)",
+   "label": "Est. temperature at 3 km (\u00b0C)",
    "clip": [
     45,
     250
    ],
-   "cmap": "plasma"
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Estimated rock temperature at 3 km depth, extended linearly from measured gradients (T = 15 \u00b0C + gradient x 3 km, capped at 400 \u00b0C). 150 \u00b0C or more is the conventional threshold for flash-steam power; 90-150 \u00b0C suits binary-cycle plants and direct use. 3 km is a routinely drillable depth.",
+   "source": {
+    "name": "Derived by this project from the SMU gradient grid (DOE GDR submission 1704)",
+    "url": "https://gdr.openei.org/submissions/1704"
+   },
+   "ramp": [
+    "#0c0786",
+    "#3d039b",
+    "#6200a6",
+    "#8506a6",
+    "#a51f97",
+    "#bf3982",
+    "#d5536d",
+    "#e76e5a",
+    "#f58d45",
+    "#fcad31",
+    "#fbd124",
+    "#eff821"
+   ]
   },
   "temp5km": {
-   "label": "Temperature at 5 km (\u00b0C)",
+   "label": "Est. temperature at 5 km (\u00b0C)",
    "clip": [
     75,
     350
    ],
-   "cmap": "plasma"
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Same derivation at 5 km - the frontier depth for enhanced geothermal systems (EGS). Where 3 km is too cool, adequate temperature at 5 km signals EGS potential with deeper drilling.",
+   "source": {
+    "name": "Derived by this project from the SMU gradient grid (DOE GDR submission 1704)",
+    "url": "https://gdr.openei.org/submissions/1704"
+   },
+   "ramp": [
+    "#0c0786",
+    "#3d039b",
+    "#6200a6",
+    "#8506a6",
+    "#a51f97",
+    "#bf3982",
+    "#d5536d",
+    "#e76e5a",
+    "#f58d45",
+    "#fcad31",
+    "#fbd124",
+    "#eff821"
+   ]
   },
   "gb_p50": {
-   "label": "Hydrothermal favorability P50 (Great Basin, percentile)",
+   "label": "Hydrothermal favorability (Great Basin percentile)",
    "clip": [
     0,
     100
    ],
-   "cmap": "viridis"
+   "cmap": "viridis",
+   "units": "percentile",
+   "explain": "USGS machine-learning prediction (2025, INGENIOUS project) of how favorable conditions are for undiscovered conventional hydrothermal systems, combining heat, active faulting, seismicity and groundwater signals. Shown as a percentile within the Great Basin: 90 means more favorable than 90% of the region. Covers the Great Basin only (NV + margins).",
+   "source": {
+    "name": "USGS Great Basin geothermal favorability (P50 estimate), DOI 10.5066/P14EET2C",
+    "url": "https://doi.org/10.5066/P14EET2C"
+   },
+   "ramp": [
+    "#440154",
+    "#482172",
+    "#423d84",
+    "#38578c",
+    "#2d6f8e",
+    "#24858d",
+    "#1e9a89",
+    "#2ab07e",
+    "#51c468",
+    "#86d449",
+    "#c2df22",
+    "#fde724"
+   ]
   }
  },
  "provenance": {
