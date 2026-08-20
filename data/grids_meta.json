@@ -119,6 +119,62 @@
     "#eff821"
    ]
   },
+  "st_temp3km": {
+   "label": "Temperature at 3 km \u2014 Stanford ML model (\u00b0C)",
+   "clip": [
+    45,
+    250
+   ],
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Machine-learning prediction of temperature at 3 km depth from the Stanford Thermal Earth Model (Aljubran & Horne, 2024) - a modern national model trained on bottom-hole temperatures plus geophysical and geological features (~4 km native resolution). More reliable than linear gradient extrapolation, especially in hydrothermal areas.",
+   "source": {
+    "name": "Stanford Thermal Earth Model (DOE GDR submission 1592), 534,942 model points",
+    "url": "https://gdr.openei.org/submissions/1592"
+   },
+   "ramp": [
+    "#0c0786",
+    "#3d039b",
+    "#6200a6",
+    "#8506a6",
+    "#a51f97",
+    "#bf3982",
+    "#d5536d",
+    "#e76e5a",
+    "#f58d45",
+    "#fcad31",
+    "#fbd124",
+    "#eff821"
+   ]
+  },
+  "st_temp5km": {
+   "label": "Temperature at 5 km \u2014 Stanford ML model (\u00b0C)",
+   "clip": [
+    75,
+    350
+   ],
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Stanford Thermal Earth Model prediction at 5 km - the EGS frontier depth. Where 3 km is too cool, adequate temperature at 5 km signals EGS potential with deeper drilling.",
+   "source": {
+    "name": "Stanford Thermal Earth Model (DOE GDR submission 1592)",
+    "url": "https://gdr.openei.org/submissions/1592"
+   },
+   "ramp": [
+    "#0c0786",
+    "#3d039b",
+    "#6200a6",
+    "#8506a6",
+    "#a51f97",
+    "#bf3982",
+    "#d5536d",
+    "#e76e5a",
+    "#f58d45",
+    "#fcad31",
+    "#fbd124",
+    "#eff821"
+   ]
+  },
   "gb_p50": {
    "label": "Hydrothermal favorability (Great Basin percentile)",
    "clip": [
@@ -168,6 +224,34 @@
    "source_id": "smu_heatflow",
    "method": "interpolated",
    "note": "Same derivation at 5 km."
+  },
+  "st_temp3km": {
+   "label": "Temperature at 3 km \u2014 Stanford ML model (\u00b0C)",
+   "clip": [
+    45,
+    250
+   ],
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Machine-learning prediction of temperature at 3 km depth from the Stanford Thermal Earth Model (Aljubran & Horne, 2024) - a modern national model trained on bottom-hole temperatures plus geophysical and geological features (~4 km native resolution). More reliable than linear gradient extrapolation, especially in hydrothermal areas.",
+   "source": {
+    "name": "Stanford Thermal Earth Model (DOE GDR submission 1592), 534,942 model points",
+    "url": "https://gdr.openei.org/submissions/1592"
+   }
+  },
+  "st_temp5km": {
+   "label": "Temperature at 5 km \u2014 Stanford ML model (\u00b0C)",
+   "clip": [
+    75,
+    350
+   ],
+   "cmap": "plasma",
+   "units": "\u00b0C",
+   "explain": "Stanford Thermal Earth Model prediction at 5 km - the EGS frontier depth. Where 3 km is too cool, adequate temperature at 5 km signals EGS potential with deeper drilling.",
+   "source": {
+    "name": "Stanford Thermal Earth Model (DOE GDR submission 1592)",
+    "url": "https://gdr.openei.org/submissions/1592"
+   }
   },
   "gb_p50": {
    "source_id": "usgs_gb_ml_2025",
